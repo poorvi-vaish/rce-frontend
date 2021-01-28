@@ -21,7 +21,7 @@ export default function ContainedButtons({
   const classes = useStyles();
   const executeCode = () => {
     onLoading(true);
-    fetch(`http://rce.manish.codes/${getRoute(language)}`, {
+    fetch(`https://rce.manish.codes/${getRoute(language)}`, {
       method: "POST",
       body: JSON.stringify({ code }),
       headers: { "Content-Type": "application/json" },
