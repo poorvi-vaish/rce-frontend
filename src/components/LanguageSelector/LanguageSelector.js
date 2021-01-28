@@ -1,6 +1,5 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
 import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 // import FormHelperText from "@material-ui/core/FormHelperText";
@@ -15,20 +14,14 @@ const useStyles = makeStyles((theme) => ({
   selectEmpty: {
     marginTop: theme.spacing(1),
   },
-  root: {
-    textColor: "green",
-    "& > *": {
-      margin: theme.spacing(2),
-      minWidth: 120,
-    },
-  },
 }));
 
-export default function SimpleSelect() {
+export default function LanguageSelector({ changeLanguage }) {
   const classes = useStyles();
   const [age, setAge] = React.useState("");
 
   const handleChange = (event) => {
+    changeLanguage(event.target.value);
     setAge(event.target.value);
   };
 
@@ -49,14 +42,11 @@ export default function SimpleSelect() {
             {/* <MenuItem value="">
                     <em>None</em>
                 </MenuItem> */}
-            <MenuItem value={"C++"}>CPP</MenuItem>
-            <MenuItem value={"JS"}>JavaScript</MenuItem>
-            <MenuItem value={"Py"}>Python</MenuItem>
+            <MenuItem value={"cpp"}>CPP</MenuItem>
+            <MenuItem value={"javascript"}>JavaScript</MenuItem>
+            <MenuItem value={"python"}>Python</MenuItem>
           </Select>
         </FormControl>
-      </div>
-      <div className={classes.root} style={{ marginTop: "2px" }}>
-        <Button variant="contained">RUN</Button>
       </div>
     </div>
   );

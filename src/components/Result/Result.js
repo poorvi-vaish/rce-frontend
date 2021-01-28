@@ -1,29 +1,38 @@
-import React, { useRef } from "react";
+import React from "react";
 
-import Editor from "@monaco-editor/react";
-
-const Result = () => {
-  const editorRef = useRef(null);
-
-  function handleEditorDidMount(editor, monaco) {
-    editorRef.current = editor;
-  }
-
-  function showValue() {
-    alert(editorRef.current.getValue());
-  }
-
+const Result = ({ output, loading }) => {
   return (
-    <>
-      <button onClick={showValue}>Show value</button>
-      <Editor
-        height="90vh"
-        defaultLanguage="javascript"
-        defaultValue="// some comment"
-        onMount={handleEditorDidMount}
-      />
-    </>
+    <div>
+      <h2>Output</h2>
+      <h3>{loading && "Loading..."}</h3>
+      <p>{output}</p>
+    </div>
   );
 };
+// import Editor from "@monaco-editor/react";
+
+// const Result = () => {
+//   const editorRef = useRef(null);
+
+//   function handleEditorDidMount(editor, monaco) {
+//     editorRef.current = editor;
+//   }
+
+//   function showValue() {
+//     alert(editorRef.current.getValue());
+//   }
+
+//   return (
+//     <>
+//       <button onClick={showValue}>Show value</button>
+//       <Editor
+//         height="90vh"
+//         defaultLanguage="javascript"
+//         defaultValue="// some comment"
+//         onMount={handleEditorDidMount}
+//       />
+//     </>
+//   );
+// };
 
 export default Result;

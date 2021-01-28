@@ -1,7 +1,7 @@
 import React from "react";
 import Editor from "@monaco-editor/react";
 
-const TextEditor = () => {
+const TextEditor = ({ language, codeChange }) => {
   // loader.config({
   //   paths: {
   //     vs: "...",
@@ -18,7 +18,9 @@ const TextEditor = () => {
         height="50vh"
         theme="vs-dark"
         defaultLanguage="javascript, cpp, python"
+        language={language}
         defaultValue="//Enter your code here"
+        onChange={codeChange}
       />
     </div>
   );
