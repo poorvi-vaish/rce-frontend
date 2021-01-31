@@ -18,7 +18,6 @@ class App extends Component {
   }
   onLanguageChange = (language) => {
     this.setState({ language: language });
-    console.log(this.state.language);
   };
 
   oncodeChange = (code) => {

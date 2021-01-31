@@ -31,7 +31,6 @@ export default function ContainedButtons({
       .then((res) => res.json())
       .then((data) => {
         onLoading(false);
-        console.log(data);
         if (data.output) setResult(data.output);
         else setResult(data.message);
         onError(Boolean(data.isError) || !Boolean(data.output));

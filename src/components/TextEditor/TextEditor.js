@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Editor from "@monaco-editor/react";
 import { SAMPLE_CODE } from "../../data/sampleCode";
 
 const TextEditor = ({ language, codeChange }) => {
+  useEffect(() => {
+    codeChange(SAMPLE_CODE[language]);
+  }, [language, codeChange]);
+
   return (
     <div style={{ border: "2px solid black" }}>
       <Editor
