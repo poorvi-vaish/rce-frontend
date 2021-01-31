@@ -32,5 +32,8 @@ npm start
 # Basic Architecture
 <img src="https://i.ibb.co/zbBg3xQ/Basic-Arch.png" alt="Basic Architecture" >
 
+# Snapshots
+<img src="https://i.ibb.co/PY9rs5V/Screenshot-from-2021-01-31-16-56-41.png" alt="Screenshot">
+
 # Hosted Link
 The frontend is hosted and live at [rce-frontend.vercel.app](https://rce-frontend.vercel.app)
