@@ -1,17 +1,8 @@
 import React from "react";
 import Editor from "@monaco-editor/react";
+import { SAMPLE_CODE } from "../../data/sampleCode";
 
 const TextEditor = ({ language, codeChange }) => {
-  // loader.config({
-  //   paths: {
-  //     vs: "...",
-  //   },
-  //   "vs/nls": {
-  //     availableLanguages: {
-  //       "*": "de",
-  //     },
-  //   },
-  // });
   return (
     <div style={{ border: "2px solid black" }}>
       <Editor
@@ -19,7 +10,7 @@ const TextEditor = ({ language, codeChange }) => {
         theme="vs-dark"
         defaultLanguage="javascript, cpp, python"
         language={language}
-        defaultValue="//Enter your code here"
+        value={SAMPLE_CODE[language]}
         onChange={codeChange}
       />
     </div>

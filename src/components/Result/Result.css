@@ -1,0 +1,21 @@
+.result-container {
+  padding: 0 10px;
+}
+
+.result-container textarea {
+  width: 100%;
+  /* height: auto; */
+  padding: 15px;
+  font-size: medium;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.result-container textarea.success {
+  background-color: rgba(47, 243, 47, 0.6);
+  color: rgb(48, 48, 48);
+}
+
+.result-container textarea.error {
+  background-color: rgba(243, 47, 47, 0.8);
+  color: wheat;
+}

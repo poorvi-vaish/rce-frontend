@@ -18,11 +18,11 @@ const useStyles = makeStyles((theme) => ({
 
 export default function LanguageSelector({ changeLanguage }) {
   const classes = useStyles();
-  const [age, setAge] = React.useState("");
+  const [value, setValue] = React.useState("javascript");
 
   const handleChange = (event) => {
     changeLanguage(event.target.value);
-    setAge(event.target.value);
+    setValue(event.target.value);
   };
 
   return (
@@ -35,13 +35,10 @@ export default function LanguageSelector({ changeLanguage }) {
           <Select
             labelId="demo-simple-select-outlined-label"
             id="demo-simple-select-outlined"
-            value={age}
+            value={value}
             onChange={handleChange}
             label="Language"
           >
-            {/* <MenuItem value="">
-                    <em>None</em>
-                </MenuItem> */}
             <MenuItem value={"cpp"}>CPP</MenuItem>
             <MenuItem value={"javascript"}>JavaScript</MenuItem>
             <MenuItem value={"python"}>Python</MenuItem>
