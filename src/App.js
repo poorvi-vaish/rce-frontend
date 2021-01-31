@@ -13,6 +13,7 @@ class App extends Component {
       code: "",
       output: "",
       loading: false,
+      isError: false,
     };
   }
   onLanguageChange = (language) => {
@@ -32,6 +33,10 @@ class App extends Component {
     this.setState({ loading });
   };
 
+  onError = (isError) => {
+    this.setState({ isError });
+  };
+
   render() {
     return (
       <div>
@@ -42,13 +47,18 @@ class App extends Component {
             language={this.state.language}
             setResult={this.onResult}
             onLoading={this.onLoading}
+            onError={this.onError}
           />
         </div>
         <TextEditor
           language={this.state.language}
           codeChange={this.oncodeChange}
         />
-        <Result output={this.state.output} loading={this.state.loading} />
+        <Result
+          isError={this.state.isError}
+          output={this.state.output}
+          loading={this.state.loading}
+        />
       </div>
     );
   }

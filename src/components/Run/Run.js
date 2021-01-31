@@ -17,10 +17,12 @@ export default function ContainedButtons({
   language,
   setResult,
   onLoading,
+  onError,
 }) {
   const classes = useStyles();
   const executeCode = () => {
     onLoading(true);
+    setResult("");
     fetch(`https://rce.manish.codes/${getRoute(language)}`, {
       method: "POST",
       body: JSON.stringify({ code }),
@@ -30,7 +32,9 @@ export default function ContainedButtons({
       .then((data) => {
         onLoading(false);
         console.log(data);
-        setResult(data.output);
+        if (data.output) setResult(data.output);
+        else setResult(data.message);
+        onError(Boolean(data.isError) || !Boolean(data.output));
       });
   };
 
