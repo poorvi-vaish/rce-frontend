@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Remote-Code-Executor
+RCE is a Remote Code Executor, as the name suggests Is a Docker-based sandbox environment to run a code snippet. It will create a new file for each code input, execute it, delete the file and return the output. It supports major languages, i.e., C++, JavaScript and Python, and can be extended to other language support too.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Features:
+- Minimal UI for user interaction and code submission.
+- Can be extended to an Online Code Judge and full-fledged coding/interview platform.
 
-## Available Scripts
+# Tech stack: 
+- React.js
+- Javascript
+- Material UI
+- Vercel
 
-In the project directory, you can run:
+# Concepts Used
+- Frontend and Backend were made separate for making it possible to scale them individually.
+- Pure components was made for each part and functionality in frontend, making the code easier to read and extend
+- Monaco Editor was used as an interactive feature rich code editor
+- Vercel was used to deploy frontend on a live link, with features like https, scalibility and CI/CD built in
 
-### `npm start`
+# Steps to Run Locally
+- Clone the Repo on your local computer
+- Run `npm install` to install all the packages
+```bash
+npm install
+```
+- Run `npm start` to start the server locally
+```bash
+npm start
+```
+- Now you can view the server live at `http://localhost:3000`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Basic Architecture
+<img src="https://i.ibb.co/zbBg3xQ/Basic-Arch.png" alt="Basic Architecture" >
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Hosted Link
+The frontend is hosted and live at [rce-frontend.vercel.app](https://rce-frontend.vercel.app)
