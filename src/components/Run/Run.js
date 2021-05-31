@@ -23,7 +23,7 @@ export default function ContainedButtons({
   const executeCode = () => {
     onLoading(true);
     setResult("");
-    fetch(`https://rce.manish.codes/${getRoute(language)}`, {
+    fetch(`https://rce.manishk.dev/${getRoute(language)}`, {
       method: "POST",
       body: JSON.stringify({ code }),
       headers: { "Content-Type": "application/json" },
